@@ -1,0 +1,37 @@
+<!DOCTYPE HTML>
+<!--
+	Multiverse by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<%= csrf_meta_tag() %>
+		<%= live_title_tag assigns[:page_title] || "Birds" %>
+
+		<link rel="stylesheet" href={Routes.static_path(@conn, "/assets/css/main.css")} />
+		<noscript><link rel="stylesheet" href={Routes.static_path(@conn, "/assets/css/noscript.css")} /></noscript>
+	</head>
+  <body class="is-preload">
+	<!-- Wrapper -->
+	<div id="wrapper">
+	<!-- Header -->
+		<header id="header">
+			<h1>Birds from Chile</h1>
+			<nav></nav>
+		</header>
+
+		<%= @inner_content %>
+    </div>
+    
+      <!-- Scripts -->
+	<script src={Routes.static_path(@conn, "/assets/js/jquery.min.js")}></script>
+	<script src={Routes.static_path(@conn, "/assets/js/jquery.poptrox.min.js")}></script>
+	<script src={Routes.static_path(@conn, "/assets/js/browser.min.js")}></script>
+	<script src={Routes.static_path(@conn, "/assets/js/breakpoints.min.js")}></script>
+	<script src={Routes.static_path(@conn, "/assets/js/util.js")}></script>
+	<script src={Routes.static_path(@conn, "/assets/js/main.js")}></script>
+  </body>
+</html>
